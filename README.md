@@ -23,7 +23,7 @@ distinct, structured outputs, each driven by its own carefully written prompt (s
 
 ## b. Live URL
 
-🔗 **[https://your-deployment-url-here.onrender.com](https://study-mate-ai-sigma.vercel.app/)**
+🔗 **[https://study-mate-ai-sigma.vercel.app/](https://study-mate-ai-sigma.vercel.app/)**
 
 > Replace this with your actual deployed URL once you've shipped it (see "How to deploy" below).
 
