@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyMate AI</title>
+<link rel="icon" type="image" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<div class="desk">
+
+  <header class="masthead">
+    <div class="masthead-left">
+      <span class="pin">📌</span>
+      <div>
+        <h1>StudyMate<span class="dash">‑</span>AI</h1>
+        <p class="subhead">Paste your notes. Pull out what actually matters.</p>
+      </div>
+    </div>
+    <div class="masthead-right">
+      <span class="tag">Powered by <link href="sameersethar.me">Sameer Sethar</span>
+    </div>
+  </header>
+
+  <main class="workspace">
+
+    <!-- Input Card -->
+    <section class="card input-card">
+      <div class="card-label">01 — Your material</div>
+      <textarea id="notesInput" placeholder="Paste lecture notes, a textbook paragraph, an article, or anything you need to study... (at least a few sentences)"></textarea>
+
+      <div class="controls-row">
+        <div class="mode-tabs" role="tablist">
+          <button class="mode-tab active" data-mode="summary">Summary</button>
+          <button class="mode-tab" data-mode="flashcards">Flashcards</button>
+          <button class="mode-tab" data-mode="quiz">Quiz</button>
+        </div>
+
+        <div class="fine-controls" id="fineControls">
+          <label class="count-control" id="countControl">
+            <span>Count</span>
+            <select id="countSelect">
+              <option value="5">5</option>
+              <option value="8" selected>8</option>
+              <option value="12">12</option>
+              <option value="15">15</option>
+            </select>
+          </label>
+          <label class="difficulty-control" id="difficultyControl" style="display:none;">
+            <span>Difficulty</span>
+            <select id="difficultySelect">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="generate-btn">
+        <span id="generateBtnText">Generate summary</span>
+      </button>
+      <p class="error-msg" id="errorMsg"></p>
+    </section>
+
+    <!-- Output Card -->
+    <section class="card output-card" id="outputCard">
+      <div class="card-label">02 — Study material</div>
+      <div id="outputEmpty" class="output-empty">
+        <p>Your generated study material will show up here.</p>
+      </div>
+
+      <div id="outputLoading" class="output-loading hidden">
+        <div class="spinner"></div>
+        <p id="loadingText">Reading your notes...</p>
+      </div>
+
+      <div id="summaryOutput" class="summary-output hidden"></div>
+
+      <div id="flashcardsOutput" class="flashcards-output hidden">
+        <div class="deck-controls">
+          <span id="cardCounter">Card 1 / 8</span>
+          <span class="hint">Click a card to flip it</span>
+        </div>
+        <div id="flashcardStage" class="flashcard-stage"></div>
+        <div class="deck-nav">
+          <button id="prevCardBtn" class="nav-btn">&larr; Prev</button>
+          <button id="nextCardBtn" class="nav-btn">Next &rarr;</button>
+        </div>
+      </div>
+
+      <div id="quizOutput" class="quiz-output hidden">
+        <div id="quizScoreBar" class="quiz-score-bar hidden">
+          <span id="quizScoreText"></span>
+        </div>
+        <div id="quizList" class="quiz-list"></div>
+        <button id="checkQuizBtn" class="generate-btn check-quiz-btn">Check answers</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot-note">
+  <!-- Built for students who'd rather understand the material than retype it. · <a href="https://github.com/" target="_blank" rel="noopener">View source on GitHub</a>
+  -->
+</footer>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
