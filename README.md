@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2f6b3aca-5f88-40df-8c4f-250c930bbe27" /># StudyMate-AI
+# StudyMate-AI
 
 **Turn messy notes into study material — instantly.**
 
