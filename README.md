@@ -1,4 +1,4 @@
-# StudyMate-AI
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2f6b3aca-5f88-40df-8c4f-250c930bbe27" /># StudyMate-AI
 
 **Turn messy notes into study material — instantly.**
 
@@ -23,7 +23,7 @@ distinct, structured outputs, each driven by its own carefully written prompt (s
 
 ## b. Live URL
 
-🔗 **[https://your-deployment-url-here.onrender.com](https://your-deployment-url-here.onrender.com)**
+🔗 **[https://your-deployment-url-here.onrender.com](https://study-mate-ai-sigma.vercel.app/)**
 
 > Replace this with your actual deployed URL once you've shipped it (see "How to deploy" below).
 
