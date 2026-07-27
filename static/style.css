@@ -100,6 +100,13 @@ html, body {
   padding: 6px 10px;
   border-radius: 3px;
   white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.tag:hover {
+  background: #858282;
+  transition: background-color 0.5s ease-in;
 }
 
 /* ---------------- Layout ---------------- */
